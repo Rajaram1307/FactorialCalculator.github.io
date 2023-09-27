@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+    <script>
+        function factorial(n) {
+            if (n == 0 || n == 1) 
+                return 1
+            else
+                return n * factorial(n-1)
+        }
+
+        function fact() {
+            let n_in_str = document.getElementById('input').value;
+            let n = Number(n_in_str)
+            let res = factorial(n);
+            document.getElementById('result').innerHTML = String(res)
+        }
+    </script>
+</head>
+<body bgcolor="pink">
+    <center>
+        <h1 style="font-family: OCR A; color: brown; font-size: 66px;">Factorial Calculator</h1>
+        <br/>
+        <br/>
+        <input type="text" id="input"
+        style="font-size: 66px; color: brown; font-family:  arial rounded mt bold; text-align: center;" >
+        <br/>
+        <br/>
+        <button style="color:white; background-color: brown; font-size: 66px; border-radius: 10%; font-family: Berlin Sans FB;"
+        onclick="fact()">Find Factorial</button>
+        <br/>
+        <br/>
+        <p style="font-family:Courier New; font-size: 66px;" id="result">Here Result will be displayed.</p>
+    </center>
+
+</body>
+</html>
